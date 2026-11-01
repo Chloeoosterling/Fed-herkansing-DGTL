@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DGTL Amsterdam — event information, tickets, gallery and FAQ.">
+    <title>DGTL Amsterdam | 2027</title>
+
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/script.js" defer></script>
+</head>
+
+<body class="amsterdam-page">
+
+    <!-- HEADER -->
+    <header class="site-header">
+
+        <a class="brand" href="index.html" aria-label="DGTL homepage">
+            <img src="img/logo.svg" alt="DGTL">
+        </a>
+
+        <div class="header-actions">
+            <button class="icon-button" id="theme-button"
+                aria-label="Toggle dark mode" title="Toggle dark mode">
+                ◐
+            </button>
+
+            <button class="icon-button menu-toggle" id="menu-button"
+                aria-label="Open menu" aria-expanded="false">
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <nav class="amsterdam-main-nav" id="main-nav" aria-label="Main navigation">
+            <a href="#event-info">Amsterdam Dance Event</a>
+            <a href="#event-info">Bengaluru</a>
+            <a href="#event-info">Goa</a>
+            <a href="#event-info" class="active">Amsterdam</a>
+        </nav>
+
+        <!-- HERO / HEADER VIDEO -->
+        <section class="amsterdam-hero" aria-label="DGTL Amsterdam 2027">
+    
+            <source src="img/header.mp4" type="video/mp4">
+
+            <div class="amsterdam-hero-content">
+                <p class="eyebrow">DGTL PRESENTS</p>
+
+                <h1>
+                    DGTL<br>
+                    AMSTERDAM 2027
+                </h1>
+
+                <p>March 26–28, 2027</p>
+            </div>
+
+        </section>
+
+
+        <!-- EVENT INFORMATION -->
+        <section class="amsterdam-event-info section-wrap" id="event-info">
+
+            <!-- LEFT COLUMN -->
+            <div class="ticket-column">
+
+                <a class="button button-primary amsterdam-signup" href="#tickets">
+                    Sign up
+                </a>
+
+                <div class="amsterdam-event-details">
+
+                    <div>
+                        <span class="amsterdam-detail-label">Date</span>
+                        <strong>March 26–28, 2027</strong>
+                    </div>
+
+                    <div>
+                        <span class="amsterdam-detail-label">Time</span>
+                        <p>
+                            Friday Night: 22:00–05:00<br>
+                            Saturday: 13:00–23:00<br>
+                            Saturday Night: 23:00–05:00<br>
+                            Sunday: 13:00–23:00<br>
+                            Sunday Night: 23:00–05:00
+                        </p>
+                    </div>
+
+                    <div>
+                        <span class="amsterdam-detail-label">Location</span>
+                        <strong>NDSM Docklands</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT COLUMN -->
+            <div class="event-intro">
+
+                <div class="amsterdam-tabs" role="tablist" aria-label="About DGTL">
+
+                    <button class="amsterdam-tab is-active"
+                        role="tab" aria-selected="true" data-tab="about">
+                        About
+                    </button>
+
+                    <button class="amsterdam-tab"
+                        role="tab" aria-selected="false" data-tab="news">
+                        News
+                    </button>
+
+                    <button class="amsterdam-tab"
+                        role="tab" aria-selected="false" data-tab="faq">
+                        FAQ
+                    </button>
+
+                </div>
+
+
+                <!-- ABOUT TAB -->
+                <div class="amsterdam-tab-panel" id="tab-about">
+
+                    <h2>About</h2>
+
+                    <p>
+                        Get ready to dive into the future of electronic music
+                        as DGTL Amsterdam returns to the NDSM Docklands on
+                        March 26–28, 2027 in Amsterdam.
+                    </p>
+
+                    <p>
+                        Experience cutting-edge stages, forward-thinking sounds,
+                        and a weekend full of art, innovation, and collective
+                        energy. From globally renowned names to tomorrow's
+                        trailblazers, we bring together a diverse lineup that
+                        defines the forefront of electronic culture.
+                    </p>
+
+                    <p>
+                        Join us this spring for an unforgettable weekend of
+                        connection, creativity, and pure dance floor magic.
+                    </p>
+
+                    <img class="amsterdam-about-image"
+                        src="img/crowd.avif"
+                        alt="Crowd at an electronic music event">
+
+
+                    <a class="amsterdam-video-card" href="#gallery"
+                        aria-label="View DGTL aftermovie">
+
+                        <img src="img/header.mp4"
+                            alt="DGTL Amsterdam aftermovie thumbnail">
+
+
+                    </a>
+
+                </div>
+
+
+                <!-- NEWS TAB -->
+                <div class="amsterdam-tab-panel is-hidden" id="tab-news">
+
+                    <h2>News</h2>
+
+                    <p>
+                        Discover the latest announcements, artist updates
+                        and stories from DGTL Amsterdam.
+                    </p>
+
+                    <a class="text-link" href="#event-news">
+                        Explore event news ↗
+                    </a>
+
+                </div>
+
+
+                <!-- FAQ TAB -->
+                <div class="amsterdam-tab-panel is-hidden" id="tab-faq">
+
+                    <h2>FAQ</h2>
+
+                    <p>
+                        Need help planning your visit? Find answers to common
+                        questions in the FAQ section below.
+                    </p>
+
+                    <a class="text-link" href="#faq">
+                        Go to frequently asked questions ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- GALLERY -->
+        <section class="section-wrap" id="gallery">
+
+            <div class="section-heading">
+                <h2>Gallery</h2>
+                <p>Moments from DGTL</p>
+            </div>
+
+            <div class="carousel">
+
+                <button class="amsterdam-carousel-arrow"
+                    data-carousel="gallery-track"
+                    data-direction="previous"
+                    aria-label="Previous gallery images">
+                    ←
+                </button>
+
+                <div class="amsterdam-carousel-track" id="gallery-track">
+
+                    <img
+                        src="https://www.datocms-assets.com/146604/1740145522-dgtlhrsaturday2023-byinfo-kirstenvansanten-nl-179.jpg?w=600&amp;h=600&amp;fit=crop"
+                        alt="Festival visitors enjoying the music"
+                        loading="lazy">
+                
+                    <img
+                        src="https://www.datocms-assets.com/146604/1738080850-04_17-dgtl-52.jpg?w=600&amp;h=600&amp;fit=crop"
+                        alt="Festival stage and crowd"
+                        loading="lazy">
+                
+                    <img
+                        src="https://www.datocms-assets.com/146604/1741643101-2023_04_09_dgtl_sunday-227.jpg?w=600&amp;h=600&amp;fit=crop"
+                        alt="DJ performing at DGTL"
+                        loading="lazy">
+                
+                </div>
+
+                <button class="amsterdam-carousel-arrow"
+                    data-carousel="gallery-track"
+                    data-direction="next"
+                    aria-label="Next gallery images">
+                    →
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- EVENT NEWS -->
+        <section class="section-wrap" id="event-news">
+
+            <div class="section-heading">
+                <h2>Event news</h2>
+
+                <a class="text-link" href="#event-news">
+                    View all ↗
+                </a>
+            </div>
+
+            <div class="amsterdam-news-grid">
+
+                <article class="amsterdam-news-card">
+
+                    <img src="img/gallery1.jpg.avif"
+                        alt="Architectural installation at a festival">
+
+                    <p class="date">2026-03-10</p>
+
+                    <h3>
+                        We're creating a 160 m LED installation for
+                        DGTL Amsterdam 2026
+                    </h3>
+
+                </article>
+
+
+                <article class="amsterdam-news-card">
+
+                    <img src="img/gallery2.png.avif"
+                        alt="Artist performing at DGTL">
+
+                    <p class="date">2026-02-20</p>
+
+                    <h3>
+                        With you at DGTL — a new season of music and connection
+                    </h3>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- CLOTHING -->
+        <section class="amsterdam-merch section-wrap" id="shop">
+
+            <div class="amsterdam-merch-image">
+
+                <img src="https://www.datocms-assets.com/146604/1773683498-dgtl-x-vertere-26_merch-banner_2400x870-v2.png?fit=crop&fp-x=0.5&fp-y=0.5&crop=focalpoint&auto=format%2Ccompress&q=80&w=1280&h=440&focalPointX=0.5&focalPointY=0.5"
+                    alt="DGTL clothing collaboration">
+
+            </div>
+
+            <div class="merch-copy">
+
+                <p class="eyebrow">DGTL × VERTIER</p>
+
+                <h2>DGTL x VERTIER</h2>
+
+                <p>
+                    Our latest DGTL x Vertier Berlin collection just dropped.
+                    What started as a collaboration has grown into a natural
+                    creative connection. Together, we created a capsule that
+                    reflects that feeling.
+                </p>
+
+                <p>
+                    Limited edition. Made for the DGTL family.
+                </p>
+
+                <a class="button button-primary" href="#shop">
+                    To the shop
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- PARTNERS -->
+        <section class="section-wrap partners">
+
+            <h2>Our partners</h2>
+
+            <div class="amsterdam-partner-grid">
+
+                <img src="img/abnamro.png.avif" alt="ABN AMRO logo">
+                <img src="img/bud.png.avif" alt="Bud logo">
+                <img src="img/lipton.png.avif" alt="Lipton logo">
+                <img src="img/frank.png.avif" alt="Frank Seltzer logo">
+               <img src="img/beyondmeat.png.avif" alt="Beyond meat">
+                <img src="img/barleduc.png.avif" alt="Bar le duc logo">
+                <img src="img/absolut.png.avif" alt="ABSOLUT. logo">
+                <img src="img/ticketswap.png.avif" alt="Ticketswap logo">
+
+            </div>
+
+        </section>
+
+
+        <!-- FAQ -->
+        <section class="section-wrap faq-section" id="faq">
+
+            <h2>FAQ</h2>
+
+            <div class="amsterdam-faq-tabs">
+
+                <button class="is-active" data-faq-group="tickets">
+                    Tickets
+                </button>
+
+                <button data-faq-group="location">
+                    Location
+                </button>
+
+                <button data-faq-group="other">
+                    Other
+                </button>
+
+            </div>
+
+
+            <!-- TICKETS -->
+            <div class="amsterdam-faq-list" data-group="tickets">
+
+                <details>
+                    <summary>Where do I buy tickets?</summary>
+                    <p>
+                        Use the official ticket link when ticket sales open.
+                        Add your real ticket URL here.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>When do I receive my tickets?</summary>
+                    <p>
+                        Check your confirmation email and the ticket provider's
+                        instructions.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Can I resell my tickets on TicketSwap?</summary>
+                    <p>
+                        Check the event's official ticket conditions for
+                        resale information.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>I lost my tickets</summary>
+                    <p>
+                        Look in your inbox and spam folder, or contact the
+                        ticket provider.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Do I need to print my tickets?</summary>
+                    <p>
+                        Check the instructions in your ticket confirmation
+                        before arriving.
+                    </p>
+                </details>
+
+            </div>
+
+
+            <!-- LOCATION -->
+            <div class="amsterdam-faq-list is-hidden" data-group="location">
+
+                <details>
+                    <summary>Where is DGTL Amsterdam?</summary>
+                    <p>
+                        DGTL Amsterdam takes place at NDSM Docklands in
+                        Amsterdam. Check the official travel information
+                        before leaving.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>How do I get there?</summary>
+                    <p>
+                        Plan your route using public transport, bicycle
+                        or the event's travel information.
+                    </p>
+                </details>
+
+            </div>
+
+
+            <!-- OTHER QUESTIONS -->
+            <div class="amsterdam-faq-list is-hidden" data-group="other">
+
+                <details>
+                    <summary>What should I bring?</summary>
+                    <p>
+                        Check the event rules for the latest information
+                        about permitted items.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Who can I contact?</summary>
+                    <p>
+                        Use the official DGTL contact page for event questions.
+                    </p>
+                </details>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <a class="brand" href="index.html">
+            <img src="img/logo.svg" alt="DGTL">
+        </a>
+
+        <p>Electronic music. Art. Sustainability.</p>
+
+        <div>
+            <a href="#event-info">Amsterdam</a>
+            <a href="#faq">FAQ</a>
+            <a href="#event-news">News</a>
+        </div>
+
+        <small>Student project — unofficial DGTL website replica.</small>
+
+    </footer>
+
+</body>
+
+</html>

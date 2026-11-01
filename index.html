@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover DGTL: upcoming editions, music, clothing and records.">
+    <title>DGTL — Homepage</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="logo" href="index.html" aria-label="DGTL homepage">
+            <img src="img/logo.svg" alt="DGTL">
+        </a>
+
+        <nav>
+            <ul>
+                <li><a href="editions.html">Editions</a></li>
+            </ul>
+        </nav>
+
+        <nav class="header-actions" aria-label="Main actions">
+            <button class="icon-button" id="theme-button" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+                <span aria-hidden="true">◐</span>
+            </button>
+            <button class="icon-button menu-button" id="menu-button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-menu">
+                <span aria-hidden="true">☰</span>
+            </button>
+        </nav>
+
+        <nav class="main-menu" id="main-menu" aria-label="Main navigation">
+            <a href="#editions">Editions</a>
+            <a href="#story">Our story</a>
+            <a href="#news">News</a>
+            <a href="#clothing">Clothing</a>
+            <a href="#records">DGTL Records</a>
+            <button type="button" id="halloween-button">Halloween mode 🎃</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" aria-label="DGTL introduction">
+            <video autoplay muted loop playsinline poster="img/hero.jpg" aria-label="Festival visuals">
+                <source src="img/header.mp4" type="video/mp4">
+            </video>
+        </section>
+
+        <section class="content-section editions-section" id="editions">
+            <h1>Upcoming editions</h1>
+            <div class="horizontal-list">
+                <article class="edition-card">
+                    <a href="editions.html">
+                        <img src="img/header.mp4" alt="Artwork for Amsterdam Dance Event" loading="lazy">
+                        <h2>Amsterdam Dance Event</h2>
+                    </a>
+                    <p class="label">Date</p><p>October 22–25, 2026</p>
+                    <p class="label">Location</p><p>NDSM Warehouse &amp; Kromhouthal</p>
+                    <a class="button" href="#ade">Tickets</a>
+                    <a class="button button-light" href="#ade">Event info</a>
+                </article>
+
+                <article class="edition-card">
+                    <a href="#bengaluru">
+                        <img src="img/header.mp4" alt="Artwork for DGTL Bengaluru" loading="lazy">
+                        <h2>Bengaluru</h2>
+                    </a>
+                    <p class="label">Date</p><p>November 13–14, 2026</p>
+                    <p class="label">Location</p><p>Bengaluru, India</p>
+                    <a class="button" href="#bengaluru">Tickets</a>
+                    <a class="button button-light" href="#bengaluru">Event info</a>
+                </article>
+
+                <article class="edition-card">
+                    <a href="#goa">
+                        <img src="img/header.mp4" alt="Artwork for DGTL Goa" loading="lazy">
+                        <h2>Goa</h2>
+                    </a>
+                    <p class="label">Date</p><p>November 14–15, 2026</p>
+                    <p class="label">Location</p><p>Goa, India</p>
+                    <a class="button" href="#goa">Tickets</a>
+                    <a class="button button-light" href="#goa">Event info</a>
+                </article>
+
+                <article class="edition-card">
+                    <a href="amsterdam.html">
+                        <img src="img/header.mp4" alt="Artwork for DGTL Amsterdam 2027" loading="lazy">
+                        <h2>Amsterdam</h2>
+                    </a>
+                    <p class="label">Date</p><p>March 26–28, 2027</p>
+                    <p class="label">Location</p><p>NDSM Docklands, Amsterdam</p>
+                    <a class="button" href="amsterdam.html">Tickets</a>
+                    <a class="button button-light" href="amsterdam.html">Event info</a>
+                </article>
+            </div>
+            <div class="carousel-controls">
+                <button type="button" class="arrow-button" id="editions-prev" aria-label="Scroll editions left">←</button>
+                <button type="button" class="arrow-button" id="editions-next" aria-label="Scroll editions right">→</button>
+            </div>
+        </section>
+
+        <section class="content-section story-section" id="story">
+            <h2>Our story</h2>
+            <p>At DGTL, we constantly strive for a balance between the leading names in art and music, the newest discoveries and exciting local treasures.</p>
+            <p>We design impressive stages within raw, industrial settings. Partnering with the best VJs, we create mesmerising light effects and visuals. In addition to celebrating electronic music and art, DGTL is a space for expression and exploration of a revolutionary sustainability project.</p>
+            <a class="button" href="#story">Read more</a>
+            <img class="story-image" src="https://www.datocms-assets.com/146604/1736354357-charlottevdgaag-301.jpg?w=900&amp;h=650&amp;fit=crop" alt="Crowd enjoying an electronic music performance" loading="lazy">
+        </section>
+
+        <section class="content-section news-section" id="news">
+            <h2>News</h2>
+            <div class="horizontal-list news-list">
+                <article class="news-card">
+                    <a href="#news-one">
+                        <img src="https://www.datocms-assets.com/146604/1740145522-dgtlhrsaturday2023-byinfo-kirstenvansanten-nl-179.jpg?w=600&amp;h=600&amp;fit=crop" alt="Aerial view of a festival venue" loading="lazy">
+                        <p class="news-date">2026-10-14</p>
+                        <h3>DGTL ADE 2026 — Kromhouthal Practical Information</h3>
+                    </a>
+                </article>
+                <article class="news-card">
+                    <a href="#news-two">
+                        <img src="https://www.datocms-assets.com/146604/1738080850-04_17-dgtl-52.jpg?w=600&amp;h=600&amp;fit=crop" alt="Festival venue and lighting" loading="lazy">
+                        <p class="news-date">2026-10-10</p>
+                        <h3>DGTL ADE — Warehouse updates</h3>
+                    </a>
+                </article>
+                <article class="news-card">
+                    <a href="#news-three">
+                        <img src="https://www.datocms-assets.com/146604/1741643101-2023_04_09_dgtl_sunday-227.jpg?w=600&amp;h=600&amp;fit=crop" alt="DJ performing at a festival" loading="lazy">
+                        <p class="news-date">2026-09-28</p>
+                        <h3>Discover the latest DGTL news</h3>
+                    </a>
+                </article>
+            </div>
+            <div class="carousel-controls">
+                <button type="button" class="arrow-button" id="news-prev" aria-label="Scroll news left">←</button>
+                <button type="button" class="arrow-button" id="news-next" aria-label="Scroll news right">→</button>
+            </div>
+        </section>
+
+        <section class="content-section clothing-section" id="clothing">
+            <h2>Clothing</h2>
+            <p><strong>Our latest DGTL x Vertere Berlin collection just dropped</strong></p>
+            <p>What started as a collaboration has grown into a natural creative connection. Vertere Berlin is founded by a collective of DJs and designers, sharing the same philosophy: nightlife is more than music. It's a space where people come together, express themselves, and move freely.</p>
+            <p>Together, we've created a capsule that reflects that feeling. Unisex pieces inspired by movement, unity and the universal energy of the dance floor. Limited edition for a single night of festival.</p>
+            <a class="button" href="https://store.dgtl.nl/">Visit store</a>
+            <img class="product-image" src="img/blauwetrui.png" alt="DGTL x Vertere blue hoodie" loading="lazy">
+        </section>
+
+        <section class="content-section records-section" id="records">
+            <h2>DGTL Records</h2>
+            <p><strong>We combine both upcoming talents together with established artists, bringing unique music and cross-over sounds.</strong></p>
+            <p>With DGTL Records we build on our festival's musical theme of an evocative cross section of sounds and styles: showcasing forward thinking, cutting edge artists. Besides this, the label also functions as a platform for newcomers. This results in the creation of a coherent selection of music with a true family vibe; we want artists to feel connected to the label, the people behind it and the other artists.</p>
+            <p>Our in-house label DGTL Records emerged from the DGTL festival brand and has a single focus on music and community.</p>
+            <a class="button" href="#records">Read more</a>
+            <img class="records-image" src="https://www.datocms-assets.com/146604/1741643101-2023_04_09_dgtl_sunday-227.jpg?w=900&amp;h=650&amp;fit=crop" alt="DJ playing in front of red stage lighting" loading="lazy">
+        </section>
+
+        <section class="newsletter-section">
+            <img src="https://www.datocms-assets.com/146604/1738080850-04_17-dgtl-52.jpg?w=900&amp;h=650&amp;fit=crop" alt="DGTL festival crowd" loading="lazy">
+            <div class="newsletter-card">
+                <h2>Stay up to date</h2>
+                <p>Sign up for the DGTL newsletter and be the first to know about important announcements.</p>
+                <form id="newsletter-form">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required placeholder="you@example.com">
+                    <button class="button" type="submit">Subscribe now</button>
+                    <p class="form-message" id="form-message" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="footer-logo" href="index.html" aria-label="DGTL homepage">D<br>G<br>T<br>L</a>
+        <nav aria-label="Editions">
+            <h2>Editions</h2>
+            <a href="#editions">Amsterdam</a>
+            <a href="#editions">Amsterdam Dance Event</a>
+        </nav>
+        <nav aria-label="Discover">
+            <h2>Discover</h2>
+            <a href="#story">Our story</a>
+            <a href="#records">Records</a>
+            <a href="#clothing">Clothing</a>
+        </nav>
+        <nav aria-label="Follow DGTL">
+            <h2>Follow DGTL</h2>
+            <a href="https://www.instagram.com/dgtlfestival/">Instagram</a>
+            <a href="https://www.youtube.com/">YouTube</a>
+        </nav>
+        <p class="copyright">© 2026 DGTL. All rights reserved.</p>
+    </footer>
+</body>
+</html>

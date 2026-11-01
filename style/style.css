@@ -1,0 +1,1507 @@
+/* Algemene instellingen */
+:root {
+    --background: #ffffff;
+    --text: #080808;
+    --surface: #f4f4f4;
+    --border: #bdbdbd;
+    --accent: #101d4a;
+    --button-text: #ffffff;
+    --content-width: 75rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--text);
+    background: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    transition: background-color 250ms ease, color 250ms ease;
+}
+
+img, video {
+    display: block;
+    max-width: 100%;
+}
+
+img {
+    height: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button, input {
+    font: inherit;
+}
+
+button, a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible, button:focus-visible, input:focus-visible {
+    outline: 3px solid #315bff;
+    outline-offset: 3px;
+}
+
+h1, h2, h3, p {
+    margin-top: 0;
+}
+
+h1, h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.05;
+}
+
+h1, h2 {
+    font-size: clamp(1.45rem, 4vw, 2.3rem);
+    letter-spacing: -0.04em;
+}
+
+h3 {
+    font-size: 0.95rem;
+    line-height: 1.25;
+}
+
+/* Header */
+.site-header {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 3.6rem;
+    padding: 0.45rem 0.8rem;
+    border-bottom: 1px solid var(--border);
+    background: var(--background);
+}
+
+header nav:first-of-type {
+    flex: 1;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+header nav li a {
+    display: inline-block;
+    padding: 0.5rem 0;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+header nav li a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.logo img {
+    width: 6.3rem;
+}
+
+.header-actions {
+    display: flex;
+    gap: 0.35rem;
+}
+
+.icon-button {
+    display: grid;
+    place-items: center;
+    min-width: 2.4rem;
+    min-height: 2.2rem;
+    border: 1px solid var(--text);
+    color: var(--text);
+    background: var(--background);
+    cursor: pointer;
+}
+
+.icon-button:hover {
+    color: var(--button-text);
+    background: var(--accent);
+}
+
+.main-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0.8rem;
+    width: min(17rem, calc(100vw - 1.6rem));
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    background: var(--background);
+    box-shadow: 0 0.6rem 1.5rem rgb(0 0 0 / 15%);
+}
+
+.main-menu.is-open {
+    display: grid;
+    gap: 0.25rem;
+}
+
+.main-menu a, .main-menu button {
+    padding: 0.7rem;
+    text-align: left;
+    border: 0;
+    color: var(--text);
+    background: transparent;
+    cursor: pointer;
+}
+
+.main-menu a:hover, .main-menu button:hover {
+    background: var(--surface);
+    text-decoration: underline;
+    text-underline-offset: 0.2rem;
+}
+
+/* Grote hero-video */
+.hero {
+    background: #000;
+}
+
+.hero video {
+    width: 100%;
+    height: clamp(5.2rem, 25vw, 22rem);
+    object-fit: cover;
+}
+
+/* Algemene secties */
+.content-section {
+    width: min(var(--content-width), calc(100% - 1.5rem));
+    margin: 0 auto;
+    padding: 2.3rem 0 0;
+}
+
+.content-section h1, .content-section h2 {
+    margin-bottom: 1rem;
+}
+
+.content-section p {
+    margin-bottom: 0.7rem;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2rem;
+    margin: 0.2rem 0.35rem 0.2rem 0;
+    padding: 0.45rem 1rem;
+    border: 1px solid var(--text);
+    color: var(--button-text);
+    background: var(--text);
+    font-size: 0.75rem;
+    text-align: center;
+    text-transform: uppercase;
+    transition: color 180ms ease, background-color 180ms ease, transform 180ms ease;
+}
+
+.button:hover {
+    color: var(--text);
+    background: var(--background);
+    transform: translateY(-2px);
+}
+
+.button-light {
+    color: var(--text);
+    background: var(--background);
+}
+
+.button-light:hover {
+    color: var(--button-text);
+    background: var(--text);
+}
+
+/* Horizontale editie- en nieuwskaarten */
+.horizontal-list {
+    display: grid;
+    grid-auto-columns: 82%;
+    grid-auto-flow: column;
+    gap: 0.7rem;
+    overflow-x: auto;
+    padding: 0 0 0.8rem;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+}
+
+.edition-card, .news-card {
+    min-width: 0;
+    scroll-snap-align: start;
+}
+
+.edition-card {
+    padding-bottom: 0.8rem;
+    border: 1px solid var(--border);
+}
+
+.edition-card > a:first-child {
+    display: block;
+}
+
+.edition-card img, .news-card img {
+    width: 100%;
+    aspect-ratio: 1.45 / 1;
+    object-fit: cover;
+    transition: transform 250ms ease, filter 250ms ease;
+}
+
+.edition-card h2 {
+    margin: 0;
+    padding: 0.55rem;
+    color: white;
+    background: var(--accent);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0;
+}
+
+.edition-card p {
+    margin: 0.2rem 0.6rem;
+    font-size: 0.75rem;
+}
+
+.edition-card .label {
+    margin-top: 0.7rem;
+    color: #777;
+    font-size: 0.62rem;
+    text-transform: uppercase;
+}
+
+.edition-card .button {
+    margin: 0.7rem 0 0 0.6rem;
+}
+
+.edition-card:hover img, .news-card:hover img {
+    transform: scale(1.025);
+    filter: contrast(1.08);
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.2rem;
+}
+
+.arrow-button {
+    min-width: 2.6rem;
+    min-height: 2.6rem;
+    border: 0;
+    color: var(--text);
+    background: transparent;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.arrow-button:hover {
+    transform: translateX(3px);
+}
+
+/* Our story */
+.story-image {
+    width: 100%;
+    max-height: 24rem;
+    margin-top: 1.2rem;
+    object-fit: cover;
+}
+
+/* News */
+.news-card img {
+    aspect-ratio: 1 / 1;
+}
+
+.news-card .news-date {
+    margin: 0.35rem 0 0.1rem;
+    color: #777;
+    font-size: 0.7rem;
+}
+
+.news-card h3 {
+    margin: 0;
+}
+
+/* Clothing and records */
+.product-image, .records-image {
+    width: 100%;
+    margin-top: 1.2rem;
+    object-fit: cover;
+}
+
+.product-image {
+    max-height: 24rem;
+    object-fit: contain;
+}
+
+.records-image {
+    max-height: 24rem;
+}
+
+/* Newsletter */
+.newsletter-section {
+    position: relative;
+    width: min(var(--content-width), calc(100% - 1.5rem));
+    margin: 3rem auto 2.5rem;
+}
+
+.newsletter-section > img {
+    width: 100%;
+    max-height: 24rem;
+    object-fit: cover;
+}
+
+.newsletter-card {
+    position: relative;
+    width: 92%;
+    margin: -1.5rem auto 0;
+    padding: 1.2rem;
+    color: var(--text);
+    background: var(--background);
+    text-align: center;
+    border: 1px solid var(--border);
+}
+
+.newsletter-card h2 {
+    margin-bottom: 0.6rem;
+}
+
+.newsletter-card p {
+    margin-bottom: 0.7rem;
+}
+
+.newsletter-card form {
+    display: grid;
+    gap: 0.5rem;
+    justify-items: center;
+}
+
+.newsletter-card label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+}
+
+.newsletter-card input {
+    width: min(100%, 20rem);
+    min-height: 2.5rem;
+    padding: 0.5rem;
+    border: 1px solid var(--border);
+    color: var(--text);
+    background: var(--background);
+}
+
+.form-message {
+    min-height: 1.2rem;
+    font-size: 0.8rem;
+}
+
+/* Footer */
+.site-footer {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+    color: #fff;
+    background: #050505;
+}
+
+.footer-logo {
+    display: block;
+    width: fit-content;
+    padding: 0.25rem;
+    border: 1px solid white;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 0.1em;
+}
+
+.site-footer nav {
+    display: grid;
+    align-content: start;
+    gap: 0.3rem;
+}
+
+.site-footer h2 {
+    margin-bottom: 0.3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0;
+}
+
+.site-footer a {
+    font-size: 0.75rem;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    grid-column: 1 / -1;
+    margin: 0;
+    font-size: 0.7rem;
+}
+
+/* Thema's: JavaScript zet een klasse op body */
+body.dark-mode {
+    --background: #111111;
+    --text: #f5f5f5;
+    --surface: #242424;
+    --border: #555555;
+    --accent: #333333;
+    --button-text: #111111;
+}
+
+body.halloween-mode {
+    --background: #17100b;
+    --text: #fff0df;
+    --surface: #2c1a10;
+    --border: #a84c16;
+    --accent: #f26a13;
+    --button-text: #111111;
+}
+
+body.halloween-mode .edition-card h2 {
+    color: #1b0e05;
+    background: #ff8a24;
+}
+
+body.halloween-mode .hero {
+    background: #1b0e05;
+}
+
+/* Beweging verminderen als de bezoeker dit instelt */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Grotere schermen */
+@media (min-width: 700px) {
+    .site-header {
+        padding-inline: 1.5rem;
+    }
+
+    .main-menu {
+        right: 1.5rem;
+    }
+
+    .content-section {
+        padding-top: 3.5rem;
+    }
+
+    .horizontal-list {
+        grid-auto-columns: minmax(15rem, 1fr);
+        grid-auto-columns: 32%;
+        gap: 1rem;
+    }
+
+    .story-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+        align-items: start;
+    }
+
+    .story-section h2 {
+        grid-column: 1 / -1;
+    }
+
+    .story-image {
+        grid-column: 2;
+        grid-row: 2 / span 4;
+        margin-top: 0;
+    }
+
+    .newsletter-card {
+        width: min(70%, 35rem);
+        margin-top: -3rem;
+        padding: 2rem;
+    }
+
+    .site-footer {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        padding: 2.5rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    .hero video {
+        height: min(55vw, 36rem);
+    }
+
+    .horizontal-list {
+        grid-auto-columns: calc((100% - 3rem) / 4);
+    }
+
+    .news-list {
+        grid-auto-columns: calc((100% - 2rem) / 3);
+    }
+}
+
+/* Amsterdam editions page */
+
+.amsterdam-hero {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.amsterdam-hero video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.amsterdam-event-info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    padding: 50px 5%;
+}
+
+@media (max-width: 700px) {
+    .amsterdam-hero {
+        height: 300px;
+    }
+
+    .amsterdam-event-info {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 30px 5%;
+    }
+}
+
+/* ========================================
+   AMSTERDAM EDITIONS PAGINA
+======================================== */
+
+.amsterdam-page .amsterdam-hero {
+    position: relative;
+    display: grid;
+    place-items: center;
+    height: clamp(16rem, 42vw, 35rem);
+    overflow: hidden;
+    color: white;
+    background: #3720b8;
+    text-align: center;
+}
+
+.amsterdam-page .amsterdam-hero video,
+.amsterdam-page .amsterdam-hero-fallback {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.amsterdam-page .amsterdam-hero-fallback {
+    background:
+        linear-gradient(135deg, transparent 20%, #a627e6 20% 42%, transparent 42%),
+        linear-gradient(35deg, #e94365 0 25%, #3520e8 25% 60%, #11152f 60%);
+}
+
+.amsterdam-page .amsterdam-hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 1rem;
+    text-shadow: 0 2px 10px rgb(0 0 0 / 35%);
+}
+
+.amsterdam-page .amsterdam-hero h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(2rem, 7vw, 5rem);
+    line-height: 0.95;
+    letter-spacing: -0.06em;
+}
+
+.amsterdam-page .amsterdam-event-info {
+    display: grid;
+    grid-template-columns: minmax(13rem, 0.8fr) minmax(0, 1.7fr);
+    gap: clamp(1.5rem, 5vw, 4.5rem);
+    width: min(var(--content-width), calc(100% - 1.5rem));
+    margin: 0 auto;
+    padding-top: 2.5rem;
+}
+
+.amsterdam-page .amsterdam-signup {
+    display: flex;
+    width: 100%;
+    background: #1717e9;
+    color: white;
+}
+
+.amsterdam-page .amsterdam-event-details {
+    display: grid;
+    gap: 1.2rem;
+    margin-top: 0.8rem;
+    padding: 1.4rem;
+    background: #f0f0f5;
+    color: #111;
+    font-size: 0.75rem;
+}
+
+.amsterdam-page .amsterdam-detail-label {
+    display: block;
+    margin-bottom: 0.3rem;
+    color: #777;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+}
+
+.amsterdam-page .amsterdam-tabs,
+.amsterdam-page .amsterdam-faq-tabs {
+    display: flex;
+    gap: 1.2rem;
+    border-bottom: 1px solid var(--text);
+}
+
+.amsterdam-page .amsterdam-tab,
+.amsterdam-page .amsterdam-faq-tabs button {
+    padding: 0.6rem 0;
+    border: 0;
+    color: var(--text);
+    background: transparent;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.amsterdam-page .amsterdam-tab.is-active,
+.amsterdam-page .amsterdam-faq-tabs button.is-active {
+    color: #1717e9;
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+}
+
+.amsterdam-page .is-hidden {
+    display: none !important;
+}
+
+.amsterdam-page .amsterdam-about-image {
+    width: min(100%, 32rem);
+    max-height: 24rem;
+    margin: 1.5rem auto;
+    object-fit: cover;
+}
+
+.amsterdam-page .amsterdam-video-card {
+    position: relative;
+    display: block;
+    width: min(100%, 25rem);
+    margin: 1.5rem auto;
+}
+
+.amsterdam-page .amsterdam-video-card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.amsterdam-page .amsterdam-video-card span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: grid;
+    width: 3rem;
+    height: 3rem;
+    place-items: center;
+    border-radius: 50%;
+    color: white;
+    background: rgb(0 0 0 / 65%);
+    transform: translate(-50%, -50%);
+}
+
+.amsterdam-page .amsterdam-carousel-track {
+    display: flex;
+    gap: 0.7rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.amsterdam-page .amsterdam-carousel-track img {
+    flex: 0 0 78%;
+    width: 78%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    scroll-snap-align: start;
+}
+
+.amsterdam-page .amsterdam-carousel-arrow {
+    margin-top: 0.4rem;
+    border: 0;
+    background: transparent;
+    color: var(--text);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.amsterdam-page .amsterdam-news-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.8rem;
+}
+
+.amsterdam-page .amsterdam-news-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.amsterdam-page .amsterdam-merch {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.amsterdam-page .amsterdam-merch-image img {
+    width: 100%;
+}
+
+.amsterdam-page .amsterdam-partner-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2rem 1rem;
+    align-items: center;
+    text-align: center;
+    font-weight: 900;
+}
+
+.amsterdam-page .amsterdam-partner-round {
+    display: grid;
+    width: 3.5rem;
+    height: 3.5rem;
+    place-items: center;
+    justify-self: center;
+    border: 2px solid var(--text);
+    border-radius: 50%;
+}
+
+.amsterdam-page .amsterdam-faq-list details {
+    border-bottom: 1px solid var(--border);
+}
+
+.amsterdam-page .amsterdam-faq-list summary {
+    padding: 0.9rem 1.5rem 0.9rem 0;
+    cursor: pointer;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.amsterdam-page .amsterdam-faq-list details p {
+    font-size: 0.8rem;
+}
+
+@media (max-width: 699px) {
+    .amsterdam-page .amsterdam-event-info {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding-top: 1.5rem;
+    }
+
+    .amsterdam-page .amsterdam-hero {
+        height: 48vw;
+        min-height: 14rem;
+    }
+
+    .amsterdam-page .amsterdam-news-grid {
+        gap: 0.65rem;
+    }
+
+    .amsterdam-page .amsterdam-news-card h3 {
+        font-size: 0.7rem;
+    }
+
+    .amsterdam-page .amsterdam-merch {
+        grid-template-columns: 1fr;
+        gap: 1.3rem;
+    }
+
+    .amsterdam-page .amsterdam-partner-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Algemene verbeteringen voor de mobiele weergave */
+.amsterdam-page {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.amsterdam-page img,
+.amsterdam-page video {
+    max-width: 100%;
+}
+
+.amsterdam-page .amsterdam-news-grid,
+.amsterdam-page .amsterdam-partner-grid {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.amsterdam-page .amsterdam-news-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.amsterdam-page .amsterdam-hero video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 600px) {
+    .amsterdam-page .amsterdam-news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .amsterdam-page .amsterdam-news-card {
+        min-width: 0;
+    }
+}
+
+/* Header van de Amsterdam-pagina */
+.amsterdam-page .site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+    padding: 0.6rem 1rem;
+}
+
+.amsterdam-page .site-header .brand {
+    display: block;
+    flex: 0 0 auto;
+}
+
+.amsterdam-page .site-header .brand img {
+    width: 6rem;
+    max-width: 100%;
+}
+
+.amsterdam-page .main-nav {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0.4rem, 1.5vw, 1.5rem);
+}
+
+.amsterdam-page .main-nav a {
+    font-size: clamp(0.55rem, 1vw, 0.85rem);
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.amsterdam-page .main-nav a.active {
+    font-weight: 700;
+}
+
+.amsterdam-page .header-actions {
+    flex: 0 0 auto;
+}
+
+@media (max-width: 600px) {
+    .amsterdam-page .site-header {
+        gap: 0.4rem;
+        padding: 0.5rem;
+    }
+
+    .amsterdam-page .site-header .brand img {
+        width: 4.5rem;
+    }
+
+    .amsterdam-page .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
+        min-width: 0;
+    }
+
+    .amsterdam-page .main-nav a {
+        padding: 0;
+        font-size: 0.6rem;
+    }
+
+    .amsterdam-page .header-actions {
+        gap: 0.2rem;
+    }
+
+    .amsterdam-page .icon-button {
+        min-width: 2rem;
+        min-height: 2rem;
+        padding: 0.2rem;
+    }
+}
+
+/* Uitlijning van de Amsterdam-secties */
+.amsterdam-page .section-wrap {
+    width: min(var(--content-width), calc(100% - 2rem));
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.amsterdam-page #gallery,
+.amsterdam-page #event-news,
+.amsterdam-page .partners,
+.amsterdam-page .faq-section {
+    padding-top: 2.5rem;
+}
+
+.amsterdam-page .section-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.amsterdam-page .amsterdam-carousel-track {
+    display: flex;
+    gap: 0.8rem;
+    overflow-x: auto;
+    padding-bottom: 0.75rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.amsterdam-page .amsterdam-carousel-track img {
+    flex: 0 0 80%;
+    width: 80%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    scroll-snap-align: start;
+}
+
+.amsterdam-page .amsterdam-news-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.amsterdam-page .amsterdam-news-card {
+    min-width: 0;
+}
+
+.amsterdam-page .amsterdam-news-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.amsterdam-page .amsterdam-news-card .date {
+    margin-top: 0.75rem;
+    color: #777;
+    font-size: 0.7rem;
+}
+
+@media (max-width: 600px) {
+    .amsterdam-page .section-wrap {
+        width: calc(100% - 2rem);
+    }
+
+    .amsterdam-page .amsterdam-news-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .amsterdam-page .amsterdam-carousel-track img {
+        flex-basis: 85%;
+        width: 85%;
+    }
+}
+
+/* ========================================
+   FIXES VOOR DE AMSTERDAM-PAGINA
+======================================== */
+
+/* Algemene instellingen */
+.amsterdam-page {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.amsterdam-page .section-wrap {
+    width: min(75rem, calc(100% - 2rem));
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 2.5rem;
+}
+
+/* Header */
+.amsterdam-page .site-header {
+    min-height: 3.5rem;
+    padding: 0.5rem 1rem;
+}
+
+.amsterdam-page .site-header .brand img {
+    width: 6rem;
+    height: auto;
+}
+
+/* Navigatie onder de header */
+.amsterdam-page .amsterdam-main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.65rem 1rem;
+    border-bottom: 1px solid var(--border);
+    background: var(--background);
+}
+
+.amsterdam-page .amsterdam-main-nav a {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}
+
+.amsterdam-page .amsterdam-main-nav a.active {
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 0.25rem;
+}
+
+/* Hero */
+.amsterdam-page .amsterdam-hero {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: clamp(18rem, 42vw, 35rem);
+    overflow: hidden;
+    color: white;
+    background: #3520e8;
+    text-align: center;
+}
+
+.amsterdam-page .amsterdam-hero video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.amsterdam-page .amsterdam-hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 1rem;
+    text-shadow: 0 2px 10px rgb(0 0 0 / 40%);
+}
+
+.amsterdam-page .amsterdam-hero .eyebrow {
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.amsterdam-page .amsterdam-hero h1 {
+    margin-bottom: 0.75rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(2rem, 7vw, 5rem);
+    line-height: 0.95;
+    letter-spacing: -0.06em;
+}
+
+.amsterdam-page .amsterdam-hero-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Eventinformatie */
+.amsterdam-page .amsterdam-event-info {
+    display: grid;
+    grid-template-columns: minmax(13rem, 0.8fr) minmax(0, 1.7fr);
+    gap: 2.5rem;
+    width: min(75rem, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 2.5rem 0 0;
+}
+
+.amsterdam-page .ticket-column {
+    min-width: 0;
+}
+
+.amsterdam-page .amsterdam-signup {
+    display: flex;
+    width: 100%;
+    min-height: 2.5rem;
+    margin: 0 0 1rem;
+    color: white;
+    background: #1717e9;
+    border-color: #1717e9;
+}
+
+.amsterdam-page .amsterdam-event-details {
+    display: grid;
+    gap: 1rem;
+    margin-top: 0;
+    padding: 1.2rem;
+    color: #111;
+    background: #f0f0f5;
+    font-size: 0.75rem;
+}
+
+.amsterdam-page .amsterdam-event-details p {
+    margin-bottom: 0;
+}
+
+.amsterdam-page .amsterdam-detail-label {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: #777;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+}
+
+/* About, News en FAQ-tabs */
+.amsterdam-page .event-intro {
+    min-width: 0;
+}
+
+.amsterdam-page .amsterdam-tabs {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.amsterdam-page .amsterdam-tab {
+    padding: 0.6rem 0;
+    border: 0;
+    color: var(--text);
+    background: transparent;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.amsterdam-page .amsterdam-tab.is-active {
+    color: #1717e9;
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+}
+
+.amsterdam-page .amsterdam-tab-panel h2 {
+    margin-bottom: 0.8rem;
+}
+
+.amsterdam-page .amsterdam-tab-panel p {
+    margin-bottom: 0.75rem;
+}
+
+.amsterdam-page .is-hidden {
+    display: none !important;
+}
+
+/* Afbeelding bij About */
+.amsterdam-page .amsterdam-about-image {
+    display: block;
+    width: 100%;
+    max-height: 25rem;
+    margin: 1.25rem 0;
+    object-fit: cover;
+}
+
+/* Aftermovie */
+.amsterdam-page .amsterdam-video-card {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 1.25rem 0;
+}
+
+.amsterdam-page .amsterdam-video-card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.amsterdam-page .amsterdam-video-card span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: grid;
+    width: 3rem;
+    height: 3rem;
+    place-items: center;
+    border-radius: 50%;
+    color: white;
+    background: rgb(0 0 0 / 70%);
+    transform: translate(-50%, -50%);
+}
+
+/* Sectiekoppen */
+.amsterdam-page .section-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.amsterdam-page .section-heading h2 {
+    margin-bottom: 1rem;
+}
+
+.amsterdam-page .section-heading p,
+.amsterdam-page .section-heading a {
+    font-size: 0.75rem;
+}
+
+/* Galerij */
+.amsterdam-page .carousel {
+    min-width: 0;
+}
+
+.amsterdam-page .amsterdam-carousel-track {
+    display: flex;
+    gap: 0.75rem;
+    overflow-x: auto;
+    padding-bottom: 0.75rem;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.amsterdam-page .amsterdam-carousel-track::-webkit-scrollbar {
+    display: none;
+}
+
+.amsterdam-page .amsterdam-carousel-track img {
+    flex: 0 0 80%;
+    width: 80%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    scroll-snap-align: start;
+}
+
+.amsterdam-page .amsterdam-carousel-arrow {
+    margin: 0.25rem 0;
+    padding: 0.2rem 0.5rem;
+    border: 0;
+    color: var(--text);
+    background: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Eventnieuws */
+.amsterdam-page .amsterdam-news-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.amsterdam-page .amsterdam-news-card {
+    min-width: 0;
+}
+
+.amsterdam-page .amsterdam-news-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.amsterdam-page .amsterdam-news-card .date {
+    margin: 0.75rem 0 0.25rem;
+    color: #777;
+    font-size: 0.7rem;
+}
+
+.amsterdam-page .amsterdam-news-card h3 {
+    font-size: 0.9rem;
+}
+
+/* Kleding */
+.amsterdam-page .amsterdam-merch {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.amsterdam-page .amsterdam-merch-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.amsterdam-page .merch-copy {
+    min-width: 0;
+}
+
+.amsterdam-page .merch-copy h2 {
+    margin-bottom: 0.75rem;
+}
+
+.amsterdam-page .merch-copy p {
+    font-size: 0.85rem;
+}
+
+/* Partnerlogo's */
+.amsterdam-page .amsterdam-partner-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2rem 1.5rem;
+    align-items: center;
+}
+
+.amsterdam-page .amsterdam-partner-grid img {
+    display: block;
+    width: 100%;
+    max-width: 8rem;
+    max-height: 4rem;
+    margin: auto;
+    object-fit: contain;
+}
+
+/* FAQ */
+.amsterdam-page .amsterdam-faq-tabs {
+    display: flex;
+    gap: 1.25rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.amsterdam-page .amsterdam-faq-tabs button {
+    padding: 0.65rem 0;
+    border: 0;
+    color: var(--text);
+    background: transparent;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.amsterdam-page .amsterdam-faq-tabs button.is-active {
+    color: #1717e9;
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+}
+
+.amsterdam-page .amsterdam-faq-list details {
+    border-bottom: 1px solid var(--border);
+}
+
+.amsterdam-page .amsterdam-faq-list summary {
+    padding: 0.9rem 1.5rem 0.9rem 0;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.amsterdam-page .amsterdam-faq-list details p {
+    padding-right: 1rem;
+    font-size: 0.85rem;
+}
+
+/* Footer */
+.amsterdam-page .site-footer {
+    margin-top: 3rem;
+}
+
+/* Mobiele weergave */
+@media (max-width: 699px) {
+    .amsterdam-page .site-header .brand img {
+        width: 4.5rem;
+    }
+
+    .amsterdam-page .amsterdam-main-nav {
+        gap: 0.35rem;
+        padding: 0.5rem;
+    }
+
+    .amsterdam-page .amsterdam-main-nav a {
+        font-size: 0.58rem;
+    }
+
+    .amsterdam-page .amsterdam-hero {
+        height: 48vw;
+        min-height: 14rem;
+        max-height: 23rem;
+    }
+
+    .amsterdam-page .amsterdam-event-info {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding-top: 1.5rem;
+    }
+
+    .amsterdam-page .section-wrap {
+        width: calc(100% - 2rem);
+        padding-top: 2rem;
+    }
+
+    .amsterdam-page .amsterdam-carousel-track img {
+        flex-basis: 85%;
+        width: 85%;
+    }
+
+    .amsterdam-page .amsterdam-news-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .amsterdam-page .amsterdam-merch {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .amsterdam-page .amsterdam-partner-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem 1rem;
+    }
+
+    .amsterdam-page .amsterdam-partner-grid img {
+        max-width: 7rem;
+        max-height: 3.5rem;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1000px) {
+    .amsterdam-page .amsterdam-carousel-track img {
+        flex-basis: 32%;
+        width: 32%;
+    }
+}
