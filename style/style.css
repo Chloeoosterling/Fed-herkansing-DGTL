@@ -585,6 +585,10 @@ body.halloween-mode .hero {
 }
 
 .amsterdam-page .section-wrap {
+    width: min(var(--content-width), calc(100% - 3rem));
+}
+
+.amsterdam-page .section-wrap {
     width: min(84rem, calc(100% - 4rem));
     margin-right: auto;
     margin-left: auto;
@@ -877,23 +881,38 @@ body.halloween-mode .hero {
     font-size: 0.9rem;
 }
 
-/* Kleding */
+/* DGTL x VERTIER */
 .amsterdam-page .amsterdam-merch {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: none;
+    margin: auto;
+}
+
+.amsterdam-page .amsterdam-merch-image {
+    position: relative;
+    width: 100%;
 }
 
 .amsterdam-page .amsterdam-merch-image img {
     display: block;
     width: 100%;
-    height: auto;
+    height: clamp(28rem, 55vw, 48rem);
     object-fit: cover;
+    object-position: center;
+    padding: 1rem;
 }
 
 .amsterdam-page .merch-copy {
-    min-width: 0;
+    position: relative;
+    z-index: 2;
+    width: min(80%, 45rem);
+    margin: -8rem auto 0;
+    padding: 2rem 2.5rem;
+    background: #fff;
+    color: #111;
+    text-align: center;
+    transform: none;
 }
 
 .amsterdam-page .merch-copy h2 {
@@ -902,6 +921,11 @@ body.halloween-mode .hero {
 
 .amsterdam-page .merch-copy p {
     font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.amsterdam-page .merch-copy .button {
+    margin-top: 1rem;
 }
 
 /* Partnerlogo's */
@@ -996,7 +1020,7 @@ body.halloween-mode .hero {
 
     .amsterdam-page .section-wrap {
         width: calc(100% - 1.5rem);
-        padding-top: 2.5rem;
+        padding-top: 5rem;
     }
 
     .amsterdam-page .amsterdam-carousel-track img {
@@ -1008,10 +1032,9 @@ body.halloween-mode .hero {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
-
-    .amsterdam-page .amsterdam-merch {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+    
+    .amsterdam-page .merch-copy {
+        padding: 3rem;
     }
 
     .amsterdam-page .amsterdam-partner-grid {
@@ -1084,55 +1107,6 @@ body.halloween-mode .hero {
     .amsterdam-page .amsterdam-news-card {
         flex-basis: 42%;
     }
-}
-
-/* DGTL x VERTIER-sectie */
-
-.amsterdam-page .amsterdam-merch {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-
-    width: 100%;
-    max-width: none;
-    margin: 3rem 0 0;
-    padding: 2.5rem 1rem;
-
-    color: #111;
-    background: #fff;
-    text-align: center;
-}
-
-.amsterdam-page .amsterdam-merch-image {
-    width: 100%;
-    max-width: 60rem;
-}
-
-.amsterdam-page .amsterdam-merch-image img {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.amsterdam-page .amsterdam-merch .merch-copy {
-    width: 100%;
-    max-width: 36rem;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.amsterdam-page .amsterdam-merch h2 {
-    margin-bottom: 1rem;
-}
-
-.amsterdam-page .amsterdam-merch p {
-    margin-bottom: 0.8rem;
-}
-
-.amsterdam-page .amsterdam-merch .button {
-    margin: 0.5rem auto 0;
 }
 
 /* Amsterdam-menu standaard verborgen */
@@ -1234,9 +1208,6 @@ body.halloween-mode .hero {
 }
 
 /* Gebruik dezelfde maximale breedte en zijmarges als de homepage */
-.amsterdam-page .section-wrap {
-    width: min(var(--content-width), calc(100% - 3rem));
-}
 
 .amsterdam-page .amsterdam-event-info {
     width: min(var(--content-width), calc(100% - 3rem));
@@ -1265,3 +1236,8 @@ body.halloween-mode .hero {
         width: calc(100% - 1.5rem);
     }
 }
+
+.amsterdam-partner-grid {
+    padding-top: 5rem;
+}
+
