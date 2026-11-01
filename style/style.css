@@ -6,7 +6,7 @@
     --border: #bdbdbd;
     --accent: #101d4a;
     --button-text: #ffffff;
-    --content-width: 75rem;
+    --content-width: 84rem;
 }
 
 * {
@@ -22,8 +22,8 @@ body {
     color: var(--text);
     background: var(--background);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.9rem;
-    line-height: 1.5;
+    font-size: 1rem;
+    line-height: 1.6;
     transition: background-color 250ms ease, color 250ms ease;
 }
 
@@ -66,7 +66,7 @@ h1, h2 {
 }
 
 h1, h2 {
-    font-size: clamp(1.45rem, 4vw, 2.3rem);
+    font-size: clamp(1.8rem, 3.2vw, 3rem);
     letter-spacing: -0.04em;
 }
 
@@ -182,15 +182,15 @@ header nav li a:hover {
 
 .hero video {
     width: 100%;
-    height: clamp(5.2rem, 25vw, 22rem);
+    height: clamp(18rem, 45vw, 40rem);
     object-fit: cover;
 }
 
 /* Algemene secties */
 .content-section {
-    width: min(var(--content-width), calc(100% - 1.5rem));
+    width: min(var(--content-width), calc(100% - 3rem));
     margin: 0 auto;
-    padding: 2.3rem 0 0;
+    padding: 3rem 0 0;
 }
 
 .content-section h1, .content-section h2 {
@@ -359,8 +359,8 @@ header nav li a:hover {
 /* Newsletter */
 .newsletter-section {
     position: relative;
-    width: min(var(--content-width), calc(100% - 1.5rem));
-    margin: 3rem auto 2.5rem;
+    width: min(var(--content-width), calc(100% - 3rem));
+    margin: 4rem auto 3rem;
 }
 
 .newsletter-section > img {
@@ -567,484 +567,11 @@ body.halloween-mode .hero {
     }
 }
 
-/* Amsterdam editions page */
-
-.amsterdam-hero {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
-}
-
-.amsterdam-hero video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.amsterdam-event-info {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 40px;
-    padding: 50px 5%;
-}
-
-@media (max-width: 700px) {
-    .amsterdam-hero {
-        height: 300px;
-    }
-
-    .amsterdam-event-info {
-        grid-template-columns: 1fr;
-        gap: 25px;
-        padding: 30px 5%;
-    }
-}
-
-/* ========================================
-   AMSTERDAM EDITIONS PAGINA
-======================================== */
-
-.amsterdam-page .amsterdam-hero {
-    position: relative;
-    display: grid;
-    place-items: center;
-    height: clamp(16rem, 42vw, 35rem);
-    overflow: hidden;
-    color: white;
-    background: #3720b8;
-    text-align: center;
-}
-
-.amsterdam-page .amsterdam-hero video,
-.amsterdam-page .amsterdam-hero-fallback {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
+/* Amsterdam hero fallback */
 .amsterdam-page .amsterdam-hero-fallback {
     background:
         linear-gradient(135deg, transparent 20%, #a627e6 20% 42%, transparent 42%),
         linear-gradient(35deg, #e94365 0 25%, #3520e8 25% 60%, #11152f 60%);
-}
-
-.amsterdam-page .amsterdam-hero-content {
-    position: relative;
-    z-index: 1;
-    padding: 1rem;
-    text-shadow: 0 2px 10px rgb(0 0 0 / 35%);
-}
-
-.amsterdam-page .amsterdam-hero h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: clamp(2rem, 7vw, 5rem);
-    line-height: 0.95;
-    letter-spacing: -0.06em;
-}
-
-.amsterdam-page .amsterdam-event-info {
-    display: grid;
-    grid-template-columns: minmax(13rem, 0.8fr) minmax(0, 1.7fr);
-    gap: clamp(1.5rem, 5vw, 4.5rem);
-    width: min(var(--content-width), calc(100% - 1.5rem));
-    margin: 0 auto;
-    padding-top: 2.5rem;
-}
-
-.amsterdam-page .amsterdam-signup {
-    display: flex;
-    width: 100%;
-    background: #1717e9;
-    color: white;
-}
-
-.amsterdam-page .amsterdam-event-details {
-    display: grid;
-    gap: 1.2rem;
-    margin-top: 0.8rem;
-    padding: 1.4rem;
-    background: #f0f0f5;
-    color: #111;
-    font-size: 0.75rem;
-}
-
-.amsterdam-page .amsterdam-detail-label {
-    display: block;
-    margin-bottom: 0.3rem;
-    color: #777;
-    font-size: 0.6rem;
-    text-transform: uppercase;
-}
-
-.amsterdam-page .amsterdam-tabs,
-.amsterdam-page .amsterdam-faq-tabs {
-    display: flex;
-    gap: 1.2rem;
-    border-bottom: 1px solid var(--text);
-}
-
-.amsterdam-page .amsterdam-tab,
-.amsterdam-page .amsterdam-faq-tabs button {
-    padding: 0.6rem 0;
-    border: 0;
-    color: var(--text);
-    background: transparent;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-
-.amsterdam-page .amsterdam-tab.is-active,
-.amsterdam-page .amsterdam-faq-tabs button.is-active {
-    color: #1717e9;
-    text-decoration: underline;
-    text-underline-offset: 0.3rem;
-}
-
-.amsterdam-page .is-hidden {
-    display: none !important;
-}
-
-.amsterdam-page .amsterdam-about-image {
-    width: min(100%, 32rem);
-    max-height: 24rem;
-    margin: 1.5rem auto;
-    object-fit: cover;
-}
-
-.amsterdam-page .amsterdam-video-card {
-    position: relative;
-    display: block;
-    width: min(100%, 25rem);
-    margin: 1.5rem auto;
-}
-
-.amsterdam-page .amsterdam-video-card img {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-}
-
-.amsterdam-page .amsterdam-video-card span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    display: grid;
-    width: 3rem;
-    height: 3rem;
-    place-items: center;
-    border-radius: 50%;
-    color: white;
-    background: rgb(0 0 0 / 65%);
-    transform: translate(-50%, -50%);
-}
-
-.amsterdam-page .amsterdam-carousel-track {
-    display: flex;
-    gap: 0.7rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-}
-
-.amsterdam-page .amsterdam-carousel-track img {
-    flex: 0 0 78%;
-    width: 78%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    scroll-snap-align: start;
-}
-
-.amsterdam-page .amsterdam-carousel-arrow {
-    margin-top: 0.4rem;
-    border: 0;
-    background: transparent;
-    color: var(--text);
-    font-size: 1.8rem;
-    cursor: pointer;
-}
-
-.amsterdam-page .amsterdam-news-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.8rem;
-}
-
-.amsterdam-page .amsterdam-news-card img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-}
-
-.amsterdam-page .amsterdam-merch {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: center;
-}
-
-.amsterdam-page .amsterdam-merch-image img {
-    width: 100%;
-}
-
-.amsterdam-page .amsterdam-partner-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 2rem 1rem;
-    align-items: center;
-    text-align: center;
-    font-weight: 900;
-}
-
-.amsterdam-page .amsterdam-partner-round {
-    display: grid;
-    width: 3.5rem;
-    height: 3.5rem;
-    place-items: center;
-    justify-self: center;
-    border: 2px solid var(--text);
-    border-radius: 50%;
-}
-
-.amsterdam-page .amsterdam-faq-list details {
-    border-bottom: 1px solid var(--border);
-}
-
-.amsterdam-page .amsterdam-faq-list summary {
-    padding: 0.9rem 1.5rem 0.9rem 0;
-    cursor: pointer;
-    font-size: 0.72rem;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.amsterdam-page .amsterdam-faq-list details p {
-    font-size: 0.8rem;
-}
-
-@media (max-width: 699px) {
-    .amsterdam-page .amsterdam-event-info {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        padding-top: 1.5rem;
-    }
-
-    .amsterdam-page .amsterdam-hero {
-        height: 48vw;
-        min-height: 14rem;
-    }
-
-    .amsterdam-page .amsterdam-news-grid {
-        gap: 0.65rem;
-    }
-
-    .amsterdam-page .amsterdam-news-card h3 {
-        font-size: 0.7rem;
-    }
-
-    .amsterdam-page .amsterdam-merch {
-        grid-template-columns: 1fr;
-        gap: 1.3rem;
-    }
-
-    .amsterdam-page .amsterdam-partner-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-/* Algemene verbeteringen voor de mobiele weergave */
-.amsterdam-page {
-    width: 100%;
-    overflow-x: hidden;
-}
-
-.amsterdam-page img,
-.amsterdam-page video {
-    max-width: 100%;
-}
-
-.amsterdam-page .amsterdam-news-grid,
-.amsterdam-page .amsterdam-partner-grid {
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.amsterdam-page .amsterdam-news-card img {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.amsterdam-page .amsterdam-hero video {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-@media (max-width: 600px) {
-    .amsterdam-page .amsterdam-news-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .amsterdam-page .amsterdam-news-card {
-        min-width: 0;
-    }
-}
-
-/* Header van de Amsterdam-pagina */
-.amsterdam-page .site-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.6rem;
-    padding: 0.6rem 1rem;
-}
-
-.amsterdam-page .site-header .brand {
-    display: block;
-    flex: 0 0 auto;
-}
-
-.amsterdam-page .site-header .brand img {
-    width: 6rem;
-    max-width: 100%;
-}
-
-.amsterdam-page .main-nav {
-    display: flex;
-    flex: 1 1 auto;
-    align-items: center;
-    justify-content: center;
-    gap: clamp(0.4rem, 1.5vw, 1.5rem);
-}
-
-.amsterdam-page .main-nav a {
-    font-size: clamp(0.55rem, 1vw, 0.85rem);
-    line-height: 1.2;
-    text-transform: uppercase;
-}
-
-.amsterdam-page .main-nav a.active {
-    font-weight: 700;
-}
-
-.amsterdam-page .header-actions {
-    flex: 0 0 auto;
-}
-
-@media (max-width: 600px) {
-    .amsterdam-page .site-header {
-        gap: 0.4rem;
-        padding: 0.5rem;
-    }
-
-    .amsterdam-page .site-header .brand img {
-        width: 4.5rem;
-    }
-
-    .amsterdam-page .main-nav {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.2rem;
-        min-width: 0;
-    }
-
-    .amsterdam-page .main-nav a {
-        padding: 0;
-        font-size: 0.6rem;
-    }
-
-    .amsterdam-page .header-actions {
-        gap: 0.2rem;
-    }
-
-    .amsterdam-page .icon-button {
-        min-width: 2rem;
-        min-height: 2rem;
-        padding: 0.2rem;
-    }
-}
-
-/* Uitlijning van de Amsterdam-secties */
-.amsterdam-page .section-wrap {
-    width: min(var(--content-width), calc(100% - 2rem));
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.amsterdam-page #gallery,
-.amsterdam-page #event-news,
-.amsterdam-page .partners,
-.amsterdam-page .faq-section {
-    padding-top: 2.5rem;
-}
-
-.amsterdam-page .section-heading {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 1rem;
-}
-
-.amsterdam-page .amsterdam-carousel-track {
-    display: flex;
-    gap: 0.8rem;
-    overflow-x: auto;
-    padding-bottom: 0.75rem;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-}
-
-.amsterdam-page .amsterdam-carousel-track img {
-    flex: 0 0 80%;
-    width: 80%;
-    height: auto;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    scroll-snap-align: start;
-}
-
-.amsterdam-page .amsterdam-news-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-}
-
-.amsterdam-page .amsterdam-news-card {
-    min-width: 0;
-}
-
-.amsterdam-page .amsterdam-news-card img {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-}
-
-.amsterdam-page .amsterdam-news-card .date {
-    margin-top: 0.75rem;
-    color: #777;
-    font-size: 0.7rem;
-}
-
-@media (max-width: 600px) {
-    .amsterdam-page .section-wrap {
-        width: calc(100% - 2rem);
-    }
-
-    .amsterdam-page .amsterdam-news-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .amsterdam-page .amsterdam-carousel-track img {
-        flex-basis: 85%;
-        width: 85%;
-    }
 }
 
 /* ========================================
@@ -1058,7 +585,7 @@ body.halloween-mode .hero {
 }
 
 .amsterdam-page .section-wrap {
-    width: min(75rem, calc(100% - 2rem));
+    width: min(84rem, calc(100% - 4rem));
     margin-right: auto;
     margin-left: auto;
     padding-top: 2.5rem;
@@ -1082,7 +609,7 @@ body.halloween-mode .hero {
     align-items: center;
     justify-content: space-between;
     gap: 0.5rem;
-    padding: 0.65rem 1rem;
+    padding: 0.5rem 1rem;
     border-bottom: 1px solid var(--border);
     background: var(--background);
 }
@@ -1149,9 +676,9 @@ body.halloween-mode .hero {
     display: grid;
     grid-template-columns: minmax(13rem, 0.8fr) minmax(0, 1.7fr);
     gap: 2.5rem;
-    width: min(75rem, calc(100% - 2rem));
+    width: min(84rem, calc(100% - 4rem));
     margin: 0 auto;
-    padding: 2.5rem 0 0;
+    padding: 3.5rem 0 0;
 }
 
 .amsterdam-page .ticket-column {
@@ -1468,8 +995,8 @@ body.halloween-mode .hero {
     }
 
     .amsterdam-page .section-wrap {
-        width: calc(100% - 2rem);
-        padding-top: 2rem;
+        width: calc(100% - 1.5rem);
+        padding-top: 2.5rem;
     }
 
     .amsterdam-page .amsterdam-carousel-track img {
@@ -1501,7 +1028,240 @@ body.halloween-mode .hero {
 /* Desktop */
 @media (min-width: 1000px) {
     .amsterdam-page .amsterdam-carousel-track img {
-        flex-basis: 32%;
-        width: 32%;
+        flex-basis: 38%;
+        width: 38%;
+    }
+}
+
+/* Crowd-afbeelding gedeeltelijk over de hero laten vallen */
+
+.amsterdam-page .amsterdam-hero {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 0;
+}
+
+.amsterdam-page .amsterdam-event-info {
+    position: relative;
+    z-index: 2;
+}
+
+.amsterdam-page .amsterdam-about-image {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 32rem);
+    margin: -1rem auto 1.5rem;
+    object-fit: cover;
+}
+
+/* Event News: horizontaal scrollbare rij */
+
+.amsterdam-page .amsterdam-news-grid {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 0 1rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+}
+
+.amsterdam-page .amsterdam-news-card {
+    flex: 0 0 85%;
+    min-width: 0;
+    scroll-snap-align: start;
+}
+
+.amsterdam-page .amsterdam-news-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+@media (min-width: 700px) {
+    .amsterdam-page .amsterdam-news-card {
+        flex-basis: 42%;
+    }
+}
+
+/* DGTL x VERTIER-sectie */
+
+.amsterdam-page .amsterdam-merch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    width: 100%;
+    max-width: none;
+    margin: 3rem 0 0;
+    padding: 2.5rem 1rem;
+
+    color: #111;
+    background: #fff;
+    text-align: center;
+}
+
+.amsterdam-page .amsterdam-merch-image {
+    width: 100%;
+    max-width: 60rem;
+}
+
+.amsterdam-page .amsterdam-merch-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.amsterdam-page .amsterdam-merch .merch-copy {
+    width: 100%;
+    max-width: 36rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.amsterdam-page .amsterdam-merch h2 {
+    margin-bottom: 1rem;
+}
+
+.amsterdam-page .amsterdam-merch p {
+    margin-bottom: 0.8rem;
+}
+
+.amsterdam-page .amsterdam-merch .button {
+    margin: 0.5rem auto 0;
+}
+
+/* Amsterdam-menu standaard verborgen */
+.amsterdam-main-nav {
+    display: none;
+}
+
+/* Menu zichtbaar na een klik op de menuknop */
+.amsterdam-main-nav.is-open {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container voor de video en de crowd-foto */
+.about-visual {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 60px auto 0;
+}
+
+/* Video die achter de foto uitsteekt */
+.about-video {
+    position: absolute;
+    top: -45px;
+    left: -45px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Crowd-foto op de voorgrond */
+.about-crowd {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+@media (max-width: 700px) {
+    .about-visual {
+        width: calc(100% - 30px);
+        margin-top: 40px;
+    }
+
+    .about-video {
+        top: -20px;
+        left: -20px;
+    }
+}
+
+
+/* Extra ruimte en schaal op brede schermen */
+@media (min-width: 1200px) {
+    .content-section {
+        padding-top: 4rem;
+    }
+
+    .amsterdam-page .amsterdam-event-info {
+        gap: 3.5rem;
+        padding-top: 3.5rem;
+    }
+
+    .amsterdam-page .amsterdam-tab-panel p,
+    .amsterdam-page .amsterdam-event-details {
+        font-size: 1rem;
+        line-height: 1.65;
+    }
+
+    .amsterdam-page .section-heading {
+        margin-bottom: 1.25rem;
+    }
+}
+
+
+/* Amsterdam-pagina: header en content dezelfde schaal als de homepage */
+.amsterdam-page .site-header {
+    gap: 1rem;
+    min-height: 4.5rem;
+    padding: 0.75rem 1.5rem;
+}
+
+.amsterdam-page .site-header .logo img {
+    width: 8rem;
+    max-width: 100%;
+    height: auto;
+}
+
+.amsterdam-page .site-header .header-actions {
+    gap: 0.5rem;
+}
+
+.amsterdam-page .site-header .icon-button {
+    min-width: 2.8rem;
+    min-height: 2.8rem;
+    font-size: 1.1rem;
+}
+
+/* Gebruik dezelfde maximale breedte en zijmarges als de homepage */
+.amsterdam-page .section-wrap {
+    width: min(var(--content-width), calc(100% - 3rem));
+}
+
+.amsterdam-page .amsterdam-event-info {
+    width: min(var(--content-width), calc(100% - 3rem));
+}
+
+/* Houd de header en content comfortabel op kleinere schermen */
+@media (max-width: 699px) {
+    .amsterdam-page .site-header {
+        min-height: 3.8rem;
+        gap: 0.5rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .amsterdam-page .site-header .logo img {
+        width: 5.5rem;
+    }
+
+    .amsterdam-page .site-header .icon-button {
+        min-width: 2.2rem;
+        min-height: 2.2rem;
+        font-size: 1rem;
+    }
+
+    .amsterdam-page .section-wrap,
+    .amsterdam-page .amsterdam-event-info {
+        width: calc(100% - 1.5rem);
     }
 }

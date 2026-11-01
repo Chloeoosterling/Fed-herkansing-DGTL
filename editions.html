@@ -16,20 +16,26 @@
     <!-- HEADER -->
     <header class="site-header">
 
-        <a class="brand" href="index.html" aria-label="DGTL homepage">
+        <a class="logo" href="index.html" aria-label="DGTL homepage">
             <img src="img/logo.svg" alt="DGTL">
         </a>
 
         <div class="header-actions">
-            <button class="icon-button" id="theme-button"
-                aria-label="Toggle dark mode" title="Toggle dark mode">
-                ◐
-            </button>
 
-            <button class="icon-button menu-toggle" id="menu-button"
-                aria-label="Open menu" aria-expanded="false">
-                ☰
-            </button>
+            <nav class="header-actions" aria-label="Main actions">
+                <button class="icon-button" id="theme-button" type="button" aria-label="Switch to dark mode"
+                    aria-pressed="false">
+                    <span aria-hidden="true">◐</span>
+                </button>
+                <button class="icon-button menu-button" id="menu-button" type="button" aria-label="Open menu"
+                    aria-expanded="false" aria-controls="main-menu">
+                    <span aria-hidden="true">☰</span>
+                </button>
+            </nav>
+
+            <nav class="main-menu" id="main-menu" aria-label="Main navigation">
+                <button type="button" id="halloween-button">Halloween mode 🎃</button>
+            </nav>
 
         </div>
 
@@ -38,7 +44,7 @@
 
     <main>
 
-        <nav class="amsterdam-main-nav" id="main-nav" aria-label="Main navigation">
+        <nav class="amsterdam-main-nav" id="main-menu" aria-label="Main navigation">
             <a href="#event-info">Amsterdam Dance Event</a>
             <a href="#event-info">Bengaluru</a>
             <a href="#event-info">Goa</a>
@@ -47,8 +53,11 @@
 
         <!-- HERO / HEADER VIDEO -->
         <section class="amsterdam-hero" aria-label="DGTL Amsterdam 2027">
-    
-            <source src="img/header.mp4" type="video/mp4">
+
+            <video autoplay muted loop playsinline>
+                <source src="img/header.mp4" type="video/mp4">
+                Je browser ondersteunt deze video niet.
+            </video>
 
             <div class="amsterdam-hero-content">
                 <p class="eyebrow">DGTL PRESENTS</p>
@@ -107,18 +116,15 @@
 
                 <div class="amsterdam-tabs" role="tablist" aria-label="About DGTL">
 
-                    <button class="amsterdam-tab is-active"
-                        role="tab" aria-selected="true" data-tab="about">
+                    <button class="amsterdam-tab is-active">
                         About
                     </button>
 
-                    <button class="amsterdam-tab"
-                        role="tab" aria-selected="false" data-tab="news">
+                    <button class="amsterdam-tab" role="tab" aria-selected="false" data-tab="news">
                         News
                     </button>
 
-                    <button class="amsterdam-tab"
-                        role="tab" aria-selected="false" data-tab="faq">
+                    <button class="amsterdam-tab" role="tab" aria-selected="false" data-tab="faq">
                         FAQ
                     </button>
 
@@ -149,19 +155,13 @@
                         connection, creativity, and pure dance floor magic.
                     </p>
 
-                    <img class="amsterdam-about-image"
-                        src="img/crowd.avif"
-                        alt="Crowd at an electronic music event">
+                    <div class="about-visual">
+                        <video class="about-video" autoplay muted loop playsinline>
+                            <source src="img/header.mp4" type="video/mp4">
+                        </video>
 
-
-                    <a class="amsterdam-video-card" href="#gallery"
-                        aria-label="View DGTL aftermovie">
-
-                        <img src="img/header.mp4"
-                            alt="DGTL Amsterdam aftermovie thumbnail">
-
-
-                    </a>
+                        <img class="about-crowd" src="img/crowd.avif" alt="Een grote menigte tijdens DGTL Festival">
+                    </div>
 
                 </div>
 
@@ -214,35 +214,25 @@
 
             <div class="carousel">
 
-                <button class="amsterdam-carousel-arrow"
-                    data-carousel="gallery-track"
-                    data-direction="previous"
+                <button class="amsterdam-carousel-arrow" data-carousel="gallery-track" data-direction="previous"
                     aria-label="Previous gallery images">
                     ←
                 </button>
 
                 <div class="amsterdam-carousel-track" id="gallery-track">
 
-                    <img
-                        src="https://www.datocms-assets.com/146604/1740145522-dgtlhrsaturday2023-byinfo-kirstenvansanten-nl-179.jpg?w=600&amp;h=600&amp;fit=crop"
-                        alt="Festival visitors enjoying the music"
-                        loading="lazy">
-                
-                    <img
-                        src="https://www.datocms-assets.com/146604/1738080850-04_17-dgtl-52.jpg?w=600&amp;h=600&amp;fit=crop"
-                        alt="Festival stage and crowd"
-                        loading="lazy">
-                
-                    <img
-                        src="https://www.datocms-assets.com/146604/1741643101-2023_04_09_dgtl_sunday-227.jpg?w=600&amp;h=600&amp;fit=crop"
-                        alt="DJ performing at DGTL"
-                        loading="lazy">
-                
+                    <img src="https://www.datocms-assets.com/146604/1740145522-dgtlhrsaturday2023-byinfo-kirstenvansanten-nl-179.jpg?w=600&amp;h=600&amp;fit=crop"
+                        alt="Festival visitors enjoying the music" loading="lazy">
+
+                    <img src="https://www.datocms-assets.com/146604/1738080850-04_17-dgtl-52.jpg?w=600&amp;h=600&amp;fit=crop"
+                        alt="Festival stage and crowd" loading="lazy">
+
+                    <img src="https://www.datocms-assets.com/146604/1741643101-2023_04_09_dgtl_sunday-227.jpg?w=600&amp;h=600&amp;fit=crop"
+                        alt="DJ performing at DGTL" loading="lazy">
+
                 </div>
 
-                <button class="amsterdam-carousel-arrow"
-                    data-carousel="gallery-track"
-                    data-direction="next"
+                <button class="amsterdam-carousel-arrow" data-carousel="gallery-track" data-direction="next"
                     aria-label="Next gallery images">
                     →
                 </button>
@@ -267,8 +257,7 @@
 
                 <article class="amsterdam-news-card">
 
-                    <img src="img/gallery1.jpg.avif"
-                        alt="Architectural installation at a festival">
+                    <img src="img/gallery1.jpg.avif" alt="Architectural installation at a festival">
 
                     <p class="date">2026-03-10</p>
 
@@ -282,8 +271,7 @@
 
                 <article class="amsterdam-news-card">
 
-                    <img src="img/gallery2.png.avif"
-                        alt="Artist performing at DGTL">
+                    <img src="img/gallery2.png.avif" alt="Artist performing at DGTL">
 
                     <p class="date">2026-02-20</p>
 
@@ -345,7 +333,7 @@
                 <img src="img/bud.png.avif" alt="Bud logo">
                 <img src="img/lipton.png.avif" alt="Lipton logo">
                 <img src="img/frank.png.avif" alt="Frank Seltzer logo">
-               <img src="img/beyondmeat.png.avif" alt="Beyond meat">
+                <img src="img/beyondmeat.png.avif" alt="Beyond meat">
                 <img src="img/barleduc.png.avif" alt="Bar le duc logo">
                 <img src="img/absolut.png.avif" alt="ABSOLUT. logo">
                 <img src="img/ticketswap.png.avif" alt="Ticketswap logo">

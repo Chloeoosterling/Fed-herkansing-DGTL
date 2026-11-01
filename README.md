@@ -21,7 +21,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 Chloé Oosterling
 
 ### Je startniveau
-**[Vul hier je startniveau in: zwart, rood of blauw.]**
+blauw
 
 ### Je focus
 **[Vul hier je focus in: responsive of surface plane.]**
@@ -55,7 +55,7 @@ Ik gebruik HTML voor de structuur, CSS voor de vormgeving en JavaScript voor int
 
 Voeg hier een screenshot van je homepage toe.
 
-<img src="readme-images/homepage-small.png" width="375px" alt="Screenshot van de DGTL-homepage op een klein scherm">
+<img src="readme-images/homepage.png" width="375px" alt="Screenshot van de DGTL-homepage op een klein scherm">
 
 ### Screenshot(s) van de tweede pagina (small screen)
 
@@ -63,7 +63,7 @@ Voeg hier een screenshot van je homepage toe.
 
 Voeg hier een screenshot van de Amsterdam-pagina toe.
 
-<img src="readme-images/amsterdam-small.png" width="375px" alt="Screenshot van de DGTL Amsterdam-pagina op een klein scherm">
+<img src="readme-images/amsterdam_editionspage.png_" width="375px" alt="Screenshot van de DGTL Amsterdam-pagina op een klein scherm">
 
 </details>
 
@@ -138,7 +138,7 @@ Ook ben ik bezig met de mobiele weergave. Ik wil dat de website niet alleen op e
 
 ### Screenshots van mijn voortgang
 
-Voeg hier screenshots toe van je website en eventueel van de bijbehorende HTML en CSS.
+<img src="readme-images/voortgangweek1.png" alt="voortgang van de pagina in de eerste week">
 
 ### Agenda voor meeting
 
@@ -147,7 +147,7 @@ De agenda maak ik samen met mijn groepje. We bespreken waar iedereen mee bezig i
 | Onderwerp | Wat wil ik bespreken? |
 |---|---|
 | HTML en CSS | Of mijn structuur logisch is en mijn styling goed wordt toegepast. |
-| Responsive design | Hoe ik de website beter kan laten aansluiten op een klein scherm. |
+| Surface plane | Hoe ik de website beter kan laten aansluiten op verschillende modussen en wat leuk is om toe te voegen
 | Vormgeving | Welke onderdelen nog afwijken van het origineel. |
 | Interactie | Hoe ik de knoppen en interactieve onderdelen goed laat werken. |
 
@@ -193,8 +193,6 @@ Ook moet ik opletten dat CSS-regels elkaar niet onbedoeld overschrijven. Omdat i
 
 ### Screenshots van mijn voortgang
 
-Voeg hier screenshots toe van de verbeterde website en de code waaraan je hebt gewerkt.
-
 ### Agenda voor meeting
 
 De agenda stel ik samen met mijn groepje op.
@@ -233,9 +231,9 @@ Bij deze test wil ik nagaan of de verbeteringen die ik eerder heb aangebracht oo
 
 Beschrijf hier welke punten uit de eerste test inmiddels zijn opgelost en welke punten nog aandacht nodig hebben.
 
-- **Verbeterd:** [beschrijf wat je hebt aangepast].
-- **Nog lastig:** [beschrijf wat nog niet goed werkt].
-- **Volgende stap:** [beschrijf wat je nog wilt verbeteren].
+- **Verbeterd:** 
+- **Nog lastig:** 
+- **Volgende stap:** 
 
 </details>
 
@@ -265,7 +263,6 @@ Ook wil ik de interactieve onderdelen controleren. Denk hierbij aan de navigatie
 
 ### Screenshots van mijn voortgang
 
-Voeg hier screenshots toe van de website in deze fase. Laat bij voorkeur ook een onderdeel zien dat je na feedback hebt verbeterd.
 
 ### Agenda voor meeting
 
@@ -274,7 +271,7 @@ De agenda stel ik samen met mijn groepje op.
 | Onderwerp | Wat wil ik bespreken? |
 |---|---|
 | Eindresultaat | Welke onderdelen zijn al goed en welke moeten nog worden aangepast? |
-| Responsive design | Werkt de website op verschillende schermformaten? |
+| surface plane | Heb ik genoeg dingen teogevoegd die we in de lessen hebben  behandeld |
 | Toegankelijkheid | Zijn er nog problemen met bediening of leesbaarheid? |
 | Afronding | Welke verbeteringen hebben voor de deadline prioriteit? |
 
@@ -299,9 +296,9 @@ De agenda stel ik samen met mijn groepje op.
 
 Mijn eindresultaat bestaat uit een replica van de DGTL-website, met een homepage en een aparte pagina voor DGTL Amsterdam.
 
-Bij het maken van de website heb ik geoefend met het opbouwen van een bestaande website in HTML en het vormgeven ervan met CSS. Ik heb ook gewerkt aan verschillende secties en aan de mobiele weergave.
+Bij het maken van de website heb ik geoefend met het opbouwen van een bestaande website in HTML en het vormgeven ervan met CSS. Ik heb ook gewerkt aan verschillende secties en aan de interactieve elementen binnen de website.
 
-Voeg hier screenshots toe van de belangrijkste onderdelen van je eindresultaat.
+
 
 <img src="readme-images/eindresultaat-homepage.png" width="375px" alt="Eindresultaat van de DGTL-homepage">
 
@@ -317,7 +314,6 @@ Daarnaast heb ik meer ervaring opgedaan met het aanpassen van de website voor kl
 
 Tot slot heb ik gemerkt dat het belangrijk is om mijn website regelmatig te controleren en kleine aanpassingen stap voor stap uit te voeren.
 
-Voeg hier een screenshot toe van een onderdeel waar je tevreden over bent.
 
 <img src="readme-images/geleerd.png" width="375px" alt="Onderdeel van de website waar ik tevreden over ben">
 
@@ -329,7 +325,6 @@ Ook liep ik tegen problemen aan met classnamen, CSS-regels en afbeeldingen die n
 
 Ik heb hiervan geleerd dat het belangrijk is om niet alleen naar het visuele resultaat te kijken, maar ook naar de structuur van mijn code. Door de website stap voor stap te controleren, kan ik fouten beter opsporen.
 
-Voeg hier eventueel een screenshot toe van een onderdeel dat niet helemaal gelukt is of waar je veel moeite mee had.
 
 <img src="readme-images/verbeterpunt.png" width="375px" alt="Onderdeel van de website dat lastig was om na te maken">
 
@@ -346,7 +341,5 @@ Voeg hier eventueel een screenshot toe van een onderdeel dat niet helemaal geluk
 2. **MDN Web Docs** — documentatie over HTML, CSS en JavaScript: https://developer.mozilla.org/
 3. **W3Schools** — uitleg en voorbeelden over HTML, CSS en JavaScript: https://www.w3schools.com/
 4. **ChatGPT (OpenAI)** — gebruikt als hulpmiddel bij het begrijpen en oplossen van problemen met HTML, CSS en JavaScript, en bij het verbeteren van de structuur en vormgeving van de website.
-
-Voeg eventuele andere websites, afbeeldingen, tutorials of bronnen die je daadwerkelijk hebt gebruikt aan deze lijst toe.
 
 </details>
